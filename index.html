@@ -350,7 +350,6 @@
                     </div>
 
         <!-- social column -->
-
                     <div class="social-links-footer">
                         <h3 class="footer-social-title">Присоединяйтесь</h3>
                         <ul class="social-links-footer-ul">
@@ -384,15 +383,79 @@
                             </li>
                         </ul>
                     </div>
+
+                    
+                    <!-- sign up form -->
+
+                    <div class="footer-follow">
+                        <p class="footer-social-title">Подпишитесь на рассылку</p>
+                        <ul class="footer-follow-ul">
+                            <li class="footer-follow-li">
+                                <form>
+                                    <input type="email" name="follow" id="follow" autocomplete="on" novalidate class="follow-input"
+                                        placeholder="E-mail">
+                                </form>
+                            </li>
+                            <li class="footer-follow-li">
+                                <button type="submit" class="follow-button">Подписаться
+                                    <svg class="svg-follow">
+                                        <use href="./images/icons/icons.svg#icon-follow-telegram" width="24" height="24"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                
             </div>
         </footer>
             <div class="backdrop is-hidden" data-modal>
                 <div class="modal">
-                    <button data-modal-close class="close">
-                        <svg class="modal-close-icon" width="18" height="18">
-                            <use href="./images/icons/icons.svg#icon-close"></use>
-                        </svg>
+                    <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+                        <form class="modal-form">
+                            <label class="form-label">
+                                <span class="form-title">Имя</span>
+                                <span class="form-area">
+                                    <svg class="form-icon">
+                                        <use href="./images/icons/icons.svg#icon-form-person"></use>
+                                    </svg>
+                                    <input type="text" name="name" id="name" min-lenth="2" autocomplete="on" required autocomplete="on" class="form-input">
+                                </span>
+                            </label>
+                            <label class="form-label">
+                                <span class="form-title">Телефон</span>
+                                <span class="form-area">
+                                    <svg class="form-icon">
+                                        <use href="./images/icons/icons.svg#icon-form-phone"></use>
+                                    </svg>
+                                    <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}" autocomplete="on" class="form-input">
+                                </span>
+                            </label>
+                            <label class="form-label">
+                                <span class="form-title">Почта</span>
+                                <span class="form-area">
+                                    <svg class="form-icon">
+                                        <use href="./images/icons/icons.svg#icon-form-mail"></use>
+                                    </svg>
+                                    <input type="mail" name="mail" id="mail" autocomplete="on" class="form-input">
+                                </span>
+                                
+                            </label>
+                            <label class="form-label">
+                                <span class="form-title">Комментарий</span>
+                                <textarea name="user-comment" class="comment" placeholder="Введите текст"></textarea>
+                            </label>
+                            <label class="form-label">
+                                <span class="checkbox-area">
+                                    <input type="checkbox" name="checkbox"><p class="checkbox-text">Соглашаюсь с рассылкой и принимаю<a href="#" class="checkbox-link">Условия договора</a></p></input>
+                                </span>
+                            </label>
+                            <button type="submit" class="modal-form-button">Отправить</button>
+                        </form>
+                            <button data-modal-close class="close">
+                            <svg class="modal-close-icon" width="18" height="18">
+                                <use href="./images/icons/icons.svg#icon-close" class="modal-icon-close"></use>
+                            </svg>
                     </button>
                 </div>
             </div>
