@@ -29,6 +29,8 @@
   --borderform: 1px solid rgba(33, 33, 33, 0.2);
   --borderformfocus: 1px solid #2196f3;
   --portfoliobuttonsshadow: 0 0 5px rgba(51, 49, 49, 0.5);
+  --checkshadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 h1,
@@ -729,6 +731,7 @@ body {
 }
 .footer-follow-ul {
   display: flex;
+  position: relative;
 }
 
 .follow-button {
@@ -741,8 +744,6 @@ body {
   border-radius: 4px;
   margin-left: 12px;
   cursor: pointer;
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.875;
@@ -775,9 +776,6 @@ body {
   border-radius: 4px;
   background-color: transparent;
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -786,13 +784,15 @@ body {
 }
 
 .follow-input::placeholder {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
+  letter-spacing: 0.03em;
+  color: var(--followform);
+}
+
+.follow-email {
+  font-size: 16px;
+  line-height: 20px;
   letter-spacing: 0.03em;
   color: var(--followform);
 }
@@ -975,7 +975,7 @@ body {
 .comment:hover,
 .comment:focus {
   border-color: var(--blue);
-  outline: none;
+  outline: var(--blue);
 }
 
 .comment::placeholder {
@@ -998,10 +998,37 @@ body {
   align-items: center;
 }
 
-.form-label-checkbox > input {
+.checkbox-area > .checkbox {
   opacity: 0;
   z-index: -1;
   position: absolute;
+}
+
+.checkbox-area > .checkbox-text {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.checkbox-area > .checkbox-text::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--black);
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.checkbox-area > .checkbox:hover + .checkbox-text::before {
+  border-color: var(--blue);
+}
+
+.checkbox-area > .checkbox:checked + .checkbox-text::before {
+  border-color: var(--blue);
+  background-image: url(../images/icons/check.svg);
+  background-color: var(--blue);
+  transition: background-color var(--transition);
 }
 
 .checkbox-text {
