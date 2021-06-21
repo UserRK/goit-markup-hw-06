@@ -970,6 +970,8 @@ body {
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.01em;
+  transition: outline var(--transition);
+  transition: border-color var(--transition);
 }
 
 .comment:hover,
@@ -1022,6 +1024,7 @@ body {
 
 .checkbox-area > .checkbox:hover + .checkbox-text::before {
   border-color: var(--blue);
+  transition: border-color var(--transition);
 }
 
 .checkbox-area > .checkbox:checked + .checkbox-text::before {
