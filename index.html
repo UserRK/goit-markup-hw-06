@@ -392,7 +392,7 @@
                         <ul class="footer-follow-ul">
                             <li class="footer-follow-li">
                                 <form>
-                                    <input type="email" name="follow" id="follow" autocomplete="on" novalidate class="follow-input"
+                                    <input type="email" name="follow" id="follow" autocomplete="on" required class="follow-input"
                                         placeholder="E-mail">
                                 </form>
                             </li>
@@ -419,7 +419,7 @@
                                     <svg class="form-icon">
                                         <use href="./images/icons/icons.svg#icon-form-person"></use>
                                     </svg>
-                                    <input type="text" name="name" id="name" min-lenth="2" autocomplete="on" required autocomplete="on" class="form-input">
+                                    <input type="text" name="name" id="name" min-lenth="2" autocomplete="on" required class="form-input">
                                 </span>
                             </label>
                             <label class="form-label">
@@ -428,7 +428,7 @@
                                     <svg class="form-icon">
                                         <use href="./images/icons/icons.svg#icon-form-phone"></use>
                                     </svg>
-                                    <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}" autocomplete="on" class="form-input">
+                                    <input type="tel" name="phone" id="phone" required autocomplete="on" class="form-input" pattern="+38([0-9]){3}-[0-9]{3}-[0-9]{3}-[0-9]{2}" title="Телефонный номер должен быть представлен в виде +38(123)123-123-12">
                                 </span>
                             </label>
                             <label class="form-label">
@@ -443,11 +443,11 @@
                             </label>
                             <label class="form-label">
                                 <span class="form-title">Комментарий</span>
-                                <textarea name="user-comment" class="comment" placeholder="Введите текст"></textarea>
+                                <textarea name="user-comment" class="comment" placeholder="Введите текст" maxlength="600" novalidate></textarea>
                             </label>
-                            <label class="form-label">
-                                <span class="checkbox-area">
-                                    <input type="checkbox" name="checkbox"><p class="checkbox-text">Соглашаюсь с рассылкой и принимаю<a href="#" class="checkbox-link">Условия договора</a></p></input>
+                            <label lass="form-label-checkbox">
+                                <span class="checkbox-area">  
+                                    <input type="checkbox" name="checkbox" class="checkbox" required><p class="checkbox-text">Соглашаюсь с рассылкой и принимаю<a href="#" class="checkbox-link">Условия договора</a></p></input>
                                 </span>
                             </label>
                             <button type="submit" class="modal-form-button">Отправить</button>
